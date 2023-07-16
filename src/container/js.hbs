@@ -4,7 +4,206 @@
 }}
 
 <div>
-  ghfdsjfdksdfk
+  <div>
+    <h1>{{name}}</h1>
+    <h3>Description: {{description}}</h3>
+    <div>
+      {{#with history}}
+        <h3>Year: {{year}}</h3>
+        <h3>Founder: {{founder}}</h3>
+      {{/with}}
+    </div>
+    <br />
+    <hr />
+
+    <div>
+      <div class='btn-group' role='group'>
+        <button
+          type='button'
+          class='btn btn-primary dropdown-toggle'
+          data-bs-toggle='dropdown'
+          aria-expanded='false'
+        >
+          Types
+        </button>
+        <ul class='dropdown-menu'>
+          <li><a
+              class='dropdown-item'
+              href='#'
+            >Number</a></li>
+          <li><a
+              class='dropdown-item'
+              href='#'
+            >String</a></li>
+          <li><a
+              class='dropdown-item'
+              href='#'
+            >Boolean</a></li>
+          <li><a
+              class='dropdown-item'
+              href='#'
+            >Null</a></li>
+          <li><a
+              class='dropdown-item'
+              href='#'
+            >Undefined</a></li>
+          <li><a
+              class='dropdown-item'
+              href='#'
+            >Symbol</a></li>
+          <li><a
+              class='dropdown-item'
+              href='#'
+            >Object</a></li>
+        </ul>
+      </div>
+
+      <div class='btn-group' role='group'>
+        <button
+          type='button'
+          class='btn btn-primary dropdown-toggle'
+          data-bs-toggle='dropdown'
+          aria-expanded='false'
+        >
+          Features
+        </button>
+        <ul class='dropdown-menu'>
+          <li><a class='dropdown-item' href='#'>First-class
+              functions</a></li>
+          <li><a
+              class='dropdown-item'
+              href='#'
+            >Closures</a></li>
+          <li><a class='dropdown-item' href='#'>Dynamic
+              typing</a></li>
+          <li><a
+              class='dropdown-item'
+              href='#'
+            >Prototype-based inheritance</a></li>
+          <li><a
+              class='dropdown-item'
+              href='#'
+            >Undefined</a></li>
+          <li><a class='dropdown-item' href='#'>Asynchronous
+              programming with Promises and async/await</a></li>
+          <li><a class='dropdown-item' href='#'>Modules with
+              import/export statementst</a></li>
+        </ul>
+      </div>
+
+      <div class='btn-group' role='group'>
+        <button
+          type='button'
+          class='btn btn-primary dropdown-toggle'
+          data-bs-toggle='dropdown'
+          aria-expanded='false'
+        >
+
+          Libraries
+        </button>
+        <ul class='dropdown-menu'>
+          <li><a
+              class='dropdown-item'
+              href='#'
+            >jQuery</a></li>
+          <li><a
+              class='dropdown-item'
+              href='#'
+            >React</a></li>
+          <li><a
+              class='dropdown-item'
+              href='#'
+            >Angular</a></li>
+          <li><a class='dropdown-item' href='#'>Vue</a></li>
+          <li><a
+              class='dropdown-item'
+              href='#'
+            >Node.js</a></li>
+          <li><a
+              class='dropdown-item'
+              href='#'
+            >Express.js</a></li>
+          <li><a
+              class='dropdown-item'
+              href='#'
+            >Lodash</a></li>
+          <li><a
+              class='dropdown-item'
+              href='#'
+            >Moment.js</a></li>
+        </ul>
+      </div>
+
+      <div class='btn-group' role='group'>
+        <button
+          type='button'
+          class='btn btn-primary dropdown-toggle'
+          data-bs-toggle='dropdown'
+          aria-expanded='false'
+        >
+          Tools
+        </button>
+        <ul class='dropdown-menu'>
+          <li><a
+              class='dropdown-item'
+              href='#'
+            >Webpack</a></li>
+          <li><a
+              class='dropdown-item'
+              href='#'
+            >ESLint</a></li>
+          <li><a
+              class='dropdown-item'
+              href='#'
+            >Jest</a></li>
+          <li><a
+              class='dropdown-item'
+              href='#'
+            >Mocha</a></li>
+          <li><a
+              class='dropdown-item'
+              href='#'
+            >Chai</a></li>
+          <li><a
+              class='dropdown-item'
+              href='#'
+            >Selenium</a></li>
+          <li><a
+              class='dropdown-item'
+              href='#'
+            >Cypress</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <br />
+
+    <div>
+      <h3>Syntax:</h3>
+      {{#with syntax}}
+        <ul>
+          <li><p>{{variables}}</p></li>
+          <li><p>{{functions}}</p></li>
+          <li><p>{{conditionals}}</p></li>
+          <li><p>{{loops}}</p></li>
+          <li><p>{{classes}}</p></li>
+        </ul>
+
+      {{/with}}
+    </div>
+
+    <hr />
+
+    <div>
+      <h3>Community:</h3>
+      <div>{{#each community}}
+          <ul>
+            <li>{{name}} ({{type}})</li></ul>
+
+        {{/each}}</div>
+
+    </div>
+  </div>
 </div>
 {{!--
 Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
