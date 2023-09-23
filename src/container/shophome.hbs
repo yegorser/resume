@@ -1,0 +1,8 @@
+<main>
+  <div>
+    {{#with navigation}}
+      {{#each links}}
+        <a href='{{this.href}}'>{{this.text}}</a>{{/each}}
+    {{/with}}
+  </div>
+</main>
