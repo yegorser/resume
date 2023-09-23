@@ -1,8 +1,120 @@
-<main>
-  <div>
-    {{#with navigation}}
-      {{#each links}}
-        <a href='{{this.href}}'>{{this.text}}</a>{{/each}}
-    {{/with}}
+<main class='p-5'>
+  <div class='row'>
+    <div class='col-12 mb-5'>
+      <div class='nav nav-tabs'>
+        <div class='nav'>
+          {{#with navigation}}
+            {{#each links}}
+              <a class='nav-link' href='{{href}}'>{{text}}
+              </a>
+            {{/each}}
+          {{/with}}
+        </div>
+        <a class='nav-link disabled' href='#'>Disabled</a>
+      </div>
+    </div>
   </div>
+
+  <div>
+    <section class='row'>
+      {{#with newsBlock}}
+        <h1 class='text-center'>{{title}}</h1>
+        <div class='row g-2'>
+
+          {{#each cards}}
+            <div class='col-3 g-2'>
+
+              <div class='card text-bg-dark'>
+
+                <div class='card-body'>
+                  <h5 class='card-tittle'>{{title}}
+                    <span
+                      class='badge text-bg-success rounded-pill text-uppercase'
+                    >{{isTop}}</span>
+                    <span
+                      class='badge text-bg-danger rounded-pill text-uppercase'
+                    > {{isNew}}</span>
+                  </h5>
+                  <p>{{description}}
+
+                  </p>
+                </div>
+              </div>
+            </div>
+          {{/each}}
+
+        </div>
+      {{/with}}
+    </section>
+  </div>
+
+
+
+  <div class="row-4">
+        <ul class="nav nav-tabs mb-4">
+           
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Electronics</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home & Kitchen</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Clothing & Accessories</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Toys & Games</a>
+            </li>
+        </ul>
+        <div class="row g-4">   
+              {{#with goodsBlock}}
+                  {{#each cards}}
+                  <div class="row-2 col-4">
+                    <div class="card">
+                      <img src="https://picsum.photos/400/200" class="card-img-top" alt="Product Image">
+                      <div class="card-body">
+                          <h5 class="card-title">{{title}}
+                            <span class="badge text-bg-warning rounded-pill text-uppercase">{{#if isHot}}
+                            {{isHot}}
+                            {{/if}}</span>
+                            <span class="badge text-bg-info rounded-pill text-uppercase">{{#if isNew includeZero=true}}
+                            {{isNew}}
+                            {{/if}}</span>
+                          </h5>
+                          <p class="card-text">{{description}}</p>   
+                      </div>
+                    </div>
+                  </div>
+                  {{/each}}
+              {{/with}}           
+        </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body text-bg-dark">
+    
+      {{#with subscribe}}
+        <h2 class="ms-3">{{header}}</h2>
+        <p class="ms-3">{{description}}</p>
+      
+        {{#each buttons}}
+          <div class="row-2">
+            <button class="btn btn-primary m-3">{{text}}
+              <a href="{{link}}"></a>
+            </button>
+          </div>
+        {{/each}}
+
+      {{/with}}
+    </div>
+  </div>  
+</body>
+</html>
+
+
+
+
+
+
+
 </main>
