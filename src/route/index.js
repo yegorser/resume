@@ -7,8 +7,8 @@ const router = express.Router()
 
 var header = {
   name: {
-    firstname: 'Ivan',
-    lastname: 'Ivanov',
+    firstname: 'Serhii',
+    lastname: 'Yehorenkov',
   },
   address: 'Ukraine, Lviv',
   position: 'Junior Fullstack JS Developer',
@@ -18,12 +18,12 @@ var header = {
 var footer = {
   social: {
     email: {
-      text: 'dmytro@mail.com',
-      href: 'mailto:dmytro@mail.com',
+      text: 'yegorenkovsergiy@gmail.com',
+      href: 'mailto:yegorenkovsergiy@gmail.com',
     },
     phone: {
-      text: '+380670000123',
-      href: 'tel:+380670000123',
+      text: '+380671918062',
+      href: 'tel:+380671918062',
     },
 
     linkedin: {
@@ -206,7 +206,7 @@ router.get('/work', function (req, res) {
     layout: 'big',
 
     page: {
-      title: 'Resume | work',
+      title: 'Resume | Work',
     },
     header,
     main: {
@@ -218,7 +218,7 @@ router.get('/work', function (req, res) {
             url: 'https://it-brains.com.ua/',
           },
           duration: {
-            from: '10.10.2022',
+            from: '24.03.2023',
             to: null,
           },
           projectAmount: 3,
@@ -247,8 +247,8 @@ router.get('/work', function (req, res) {
                   name: 'problem programs',
                 },
               ],
-              stackAmount: 8,
-              awardAmount: 5,
+              stackAmount: 3,
+              awardAmount: 2,
             },
           ],
         },
