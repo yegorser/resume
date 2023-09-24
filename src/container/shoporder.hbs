@@ -1,0 +1,20 @@
+<div class='p-5'>
+  <div class='row'>
+    <div class='col-12 mb-5'>
+      <div class='nav nav-tabs'>
+        <div class='nav'>
+          {{#with navigation}}
+            {{#each links}}
+              <a class='nav-link' href='{{href}}'>{{text}}
+              </a>
+            {{/each}}
+          {{/with}}
+        </div>
+        <a class='nav-link disabled' href='#'>Disabled</a>
+      </div>
+
+      <h1 class='mt-5'>{{header}}</h1>
+
+    </div>
+  </div>
+</div>
